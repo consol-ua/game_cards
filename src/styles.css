@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu board";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 100px 1fr;
+}
+
+.header {
+  grid-area: header;
+  background: yellow;
+}
+
+.menu {
+  grid-area: menu;
+  background: grey;
+}
+
+.board {
+  grid-area: board;
+  background: rgb(80, 174, 228);
+}
