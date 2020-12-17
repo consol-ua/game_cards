@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -7,19 +12,32 @@
     "menu board";
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 100px 1fr;
+  padding: 20px;
+  height: 100vh;
+  background: url("https://s1.1zoom.ru/b6135/807/Cards_Hands_546115_1920x1080.jpg")
+    center / cover no-repeat;
 }
 
 .header {
+  z-index: 5;
   grid-area: header;
-  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: #a7ceccaa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .menu {
   grid-area: menu;
-  background: grey;
+  background: #a7ceccaa;
+  border-bottom-left-radius: 10px;
 }
 
 .board {
   grid-area: board;
-  background: rgb(80, 174, 228);
+  background: #a7ceccaa;
+  border-bottom-right-radius: 10px;
 }
