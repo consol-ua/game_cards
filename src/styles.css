@@ -28,12 +28,7 @@
   background: #a7ceccaa;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-.menu {
-  grid-area: menu;
-  background: #a7ceccaa;
-  border-bottom-left-radius: 10px;
+  border-bottom: 1px solid black;
 }
 
 .board {

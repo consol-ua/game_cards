@@ -1,12 +1,16 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Menu from "./components/menu";
 import "./styles.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="header">Игра: Найди пару</div>
-      <div className="menu">menu</div>
-      <div className="board">board</div>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="header">Игра: Найди пару</div>
+        <Menu />
+        <div className="board">board</div>
+      </div>
+    </BrowserRouter>
   );
 }
