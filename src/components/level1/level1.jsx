@@ -37,28 +37,65 @@ class Level1 extends React.Component {
     },
     {
       id: 6,
+      name: "iconJS",
+      faceImg: "https://img.icons8.com/color/452/javascript.png",
+      flip: false,
+    },
+    {
+      id: 7,
+      name: "React",
+      faceImg:
+        "https://e7.pngegg.com/pngimages/452/495/png-clipart-react-javascript-angularjs-ionic-github-text-logo-thumbnail.png",
+    },
+    {
+      id: 8,
+      name: "VueJS",
+      faceImg:
+        "https://img2.freepng.ru/20180718/cbh/kisspng-vue-js-javascript-library-angularjs-react-vue-js-5b4ebe1bc45884.1915769815318871318042.jpg",
+    },
+    {
+      id: 9,
+      name: "Angular",
+      faceImg:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+      flip: false,
+    },
+    {
+      id: 10,
+      name: "Ember",
+      faceImg:
+        "https://c0.klipartz.com/pngpicture/616/203/sticker-png-ember-js-javascript-framework-computer-icons-front-end-mammal-cat-like-mammal-carnivoran-dog-like-mammal-logo.png",
+    },
+    {
+      id: 11,
       name: "Node",
       faceImg:
         "https://img.favpng.com/20/4/0/node-js-javascript-react-mean-angularjs-png-favpng-9jx9sihXGEqtr5xCmpXZtGFjQ.jpg",
     },
     {
-      id: 7,
-      name: "VSCode",
+      id: 12,
+      name: "Node",
       faceImg:
-        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
+        "https://img.favpng.com/20/4/0/node-js-javascript-react-mean-angularjs-png-favpng-9jx9sihXGEqtr5xCmpXZtGFjQ.jpg",
     },
-    {
-      id: 8,
-      name: "CSS",
-      faceImg:
-        "https://wedal.ru/images/stories/ARTICLES/design/joomlal_css_logo/css.png",
-    },
-    {
-      id: 9,
-      name: "CSS",
-      faceImg:
-        "https://wedal.ru/images/stories/ARTICLES/design/joomlal_css_logo/css.png",
-    },
+    // {
+    //   id: 7,
+    //   name: "VSCode",
+    //   faceImg:
+    //     "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
+    // },
+    // {
+    //   id: 8,
+    //   name: "CSS",
+    //   faceImg:
+    //     "https://wedal.ru/images/stories/ARTICLES/design/joomlal_css_logo/css.png",
+    // },
+    // {
+    //   id: 9,
+    //   name: "CSS",
+    //   faceImg:
+    //     "https://wedal.ru/images/stories/ARTICLES/design/joomlal_css_logo/css.png",
+    // },
   ];
 
   shuffleCards(arr) {
@@ -81,10 +118,28 @@ class Level1 extends React.Component {
             className={s.memory_card + " " + s.flip}
             key={el.id}
             id={el.id}
-            onClick={(e) => this.props.flipOnClick(e.currentTarget.id)}
+            data-name={el.name}
+            onClick={(e) =>
+              this.props.flipOnClick(
+                e.currentTarget.id,
+                e.currentTarget.dataset.name
+              )
+            }
           >
             <img className={s.front_face} src={el.faceImg} alt={el.name} />
             <BackFace />
+          </div>
+        );
+      } else if (el.lock) {
+        return (
+          <div
+            className={s.memory_card + " " + s.flip}
+            key={el.id}
+            id={el.id}
+            data-name={el.name}
+          >
+            {/* <img className={s.front_face} src={el.faceImg} alt={el.name} />
+            <BackFace /> */}
           </div>
         );
       }
@@ -93,7 +148,13 @@ class Level1 extends React.Component {
           className={s.memory_card}
           key={el.id}
           id={el.id}
-          onClick={(e) => this.props.flipOnClick(e.currentTarget.id)}
+          data-name={el.name}
+          onClick={(e) =>
+            this.props.flipOnClick(
+              e.currentTarget.id,
+              e.currentTarget.dataset.name
+            )
+          }
         >
           <img className={s.front_face} src={el.faceImg} alt={el.name} />
           <BackFace />
@@ -102,19 +163,50 @@ class Level1 extends React.Component {
     });
   }
   resetBoard() {
+    // this.props.setCards(this.shuffleCards(this._cards));
+    this.props.resetCasds();
+  }
+  stepGame() {
     if (this.props.flippedCards === 2) {
-      setTimeout(this.props.resetCasds, 300);
+      if (this.props.entryCardId[0] === this.props.entryCardId[1]) {
+        setTimeout(this.props.lockedCard(this.props.entryCardId[0]), 400);
+      }
+      setTimeout(this.props.resetCasds, 400);
     }
   }
-  lockCards() {}
 
-  componentDidMount() {
+  winGame() {
+    debugger;
+    if (!this.props.level1.gameWin) {
+      if (this.props.cards.length > 0) {
+        let sumCasds = this.props.cards.length;
+        let sumLockedCards = 0;
+        this.props.cards.forEach((el) => {
+          if (el.lock) {
+            sumLockedCards += 1;
+          }
+        });
+        if (sumCasds === sumLockedCards) {
+          this.props.winGame();
+          alert("You WON");
+        }
+      }
+    }
+  }
+
+  refresh() {
     this.props.setCards(this.shuffleCards(this._cards));
   }
+  componentDidMount() {
+    this.refresh();
+  }
+  componentDidUpdate() {}
 
   render() {
     console.log(this.props);
-    this.resetBoard();
+    // this.resetBoard();
+    this.stepGame();
+    this.winGame();
     return (
       <div className="board">
         <div style={{ width: "100%" }}>
@@ -122,6 +214,9 @@ class Level1 extends React.Component {
             Level 1
           </div>
           <div className={s.game__board}>{this.renderCards()}</div>
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <button onClick={() => this.refresh()}>Начать заново</button>
+          </div>
         </div>
       </div>
     );

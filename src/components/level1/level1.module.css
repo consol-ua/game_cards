@@ -5,7 +5,7 @@
 }
 .game__board {
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     max-height: 100%;
     /* height: 100%; */
     display: flex;
@@ -14,13 +14,14 @@
 }
 
 .memory_card {
-    flex: 0 0 calc(32% - 10px);
+    flex: 0 0 calc(24% - 10px);
     height: 150px;
     margin: 5px;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+    cursor: pointer;
 }
 
 .memory_card:active {
@@ -31,6 +32,7 @@
 .memory_card.flip {
     transform: rotateY(180deg);
 }
+
 
 .front_face,
 .back_face {
