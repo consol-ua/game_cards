@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background: url("https://s1.1zoom.ru/b6135/807/Cards_Hands_546115_1920x1080.jpg")
+    center / cover no-repeat;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -13,9 +17,7 @@
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 100px 1fr;
   padding: 20px;
-  height: 100vh;
-  background: url("https://s1.1zoom.ru/b6135/807/Cards_Hands_546115_1920x1080.jpg")
-    center / cover no-repeat;
+  
 }
 
 .header {
@@ -35,4 +37,8 @@
   grid-area: board;
   background: #a7ceccaa;
   border-bottom-right-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
