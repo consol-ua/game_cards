@@ -10,7 +10,7 @@
 
 # production
 /build
-/.codesandbox
+
 
 # misc
 .DS_Store
