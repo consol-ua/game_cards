@@ -6,6 +6,7 @@
 body {
   background: url("https://s1.1zoom.ru/b6135/807/Cards_Hands_546115_1920x1080.jpg")
     center / cover no-repeat;
+    min-height: 100vh;
 }
 .App {
   font-family: sans-serif;

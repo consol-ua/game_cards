@@ -17,11 +17,11 @@ export default function Menu() {
         </NavLink>
       </div>
       <NavLink
-        to="/result"
+        to="/about"
         className={s.menu__result}
         activeClassName={s.active}
       >
-        Result
+        About Game
       </NavLink>
     </div>
   );

@@ -7,11 +7,11 @@ import {
   setCardsAC,
   winGameAC,
 } from "../../redux/level_reducer";
-import Level1 from "./level1";
+import Level2 from "./level2";
 
 function mapStateToProps(state) {
   return {
-    level1: state.levelPage,
+    level2: state.levelPage,
     cards: state.levelPage.cards,
     flippedCards: state.levelPage.flippedCards,
     entryCardId: state.levelPage.entryCardId,
@@ -27,5 +27,5 @@ function mapDispatchToProps(dispatch) {
     resetGame: () => dispatch(resetGameAC()),
   };
 }
-const Level1Container = connect(mapStateToProps, mapDispatchToProps)(Level1);
-export default Level1Container;
+const Level2Container = connect(mapStateToProps, mapDispatchToProps)(Level2);
+export default Level2Container;

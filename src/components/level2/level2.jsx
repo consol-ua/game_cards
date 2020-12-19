@@ -1,8 +1,8 @@
 import React from "react";
 import BackFace from "./back_face/back_face";
-import s from "./level1.module.css";
+import s from "./level2.module.css";
 
-class Level1 extends React.Component {
+class Level2 extends React.Component {
   _cards = [
     {
       id: 1,
@@ -74,28 +74,50 @@ class Level1 extends React.Component {
       name: "Node",
       faceImg: "https://cdn.worldvectorlogo.com/logos/node-js-logo.svg",
     },
-    // {
-    //   id: 13,
-    //   name: "VSCode",
-    //   faceImg:
-    //     "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
-    // },
-    // {
-    //   id: 14,
-    //   name: "VSCode",
-    //   faceImg:
-    //     "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
-    // },
-    // {
-    //   id: 15,
-    //   name: "Camera",
-    //   faceImg: "https://simpleicon.com/wp-content/uploads/camera.svg",
-    // },
-    // {
-    //   id: 16,
-    //   name: "Camera",
-    //   faceImg: "https://simpleicon.com/wp-content/uploads/camera.svg",
-    // },
+    {
+      id: 13,
+      name: "VSCode",
+      faceImg:
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
+    },
+    {
+      id: 14,
+      name: "VSCode",
+      faceImg:
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/217d5ea0-623d-40b1-9b31-027b904a5f15/ddjrgww-846ce429-3b0d-4ad8-bf6d-ac52dfe48201.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMjE3ZDVlYTAtNjIzZC00MGIxLTliMzEtMDI3YjkwNGE1ZjE1XC9kZGpyZ3d3LTg0NmNlNDI5LTNiMGQtNGFkOC1iZjZkLWFjNTJkZmU0ODIwMS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ZkEnCXJtjhT0v0UEQF7_k0VfiSaIoZa-YlerQJG-CXw",
+    },
+    {
+      id: 15,
+      name: "Camera",
+      faceImg: "https://simpleicon.com/wp-content/uploads/camera.svg",
+    },
+    {
+      id: 16,
+      name: "Camera",
+      faceImg: "https://simpleicon.com/wp-content/uploads/camera.svg",
+    },
+    {
+      id: 17,
+      name: "Tag",
+      faceImg:
+        "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg",
+    },
+    {
+      id: 18,
+      name: "Tag",
+      faceImg:
+        "https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg",
+    },
+    {
+      id: 19,
+      name: "Rocket",
+      faceImg: "https://simpleicon.com/wp-content/uploads/rocket.svg",
+    },
+    {
+      id: 20,
+      name: "Rocket",
+      faceImg: "https://simpleicon.com/wp-content/uploads/rocket.svg",
+    },
   ];
 
   shuffleCards(arr) {
@@ -111,10 +133,10 @@ class Level1 extends React.Component {
 
   renderCards() {
     const cards = this.props.cards;
-    if (this.props.level1.gameWin) {
+    if (this.props.level2.gameWin) {
       return (
         <div className={s.win__game}>
-          Победа! Количество ходов: {this.props.level1.stepCount}
+          Победа! Количество ходов: {this.props.level2.stepCount}
         </div>
       );
     }
@@ -126,12 +148,6 @@ class Level1 extends React.Component {
             key={el.id}
             id={el.id}
             data-name={el.name}
-            // onClick={(e) =>
-            //   this.props.flipOnClick(
-            //     e.currentTarget.id,
-            //     e.currentTarget.dataset.name
-            //   )
-            // }
           >
             <img className={s.front_face} src={el.faceImg} alt={el.name} />
             <BackFace />
@@ -170,7 +186,6 @@ class Level1 extends React.Component {
     });
   }
   resetBoard() {
-    // this.props.setCards(this.shuffleCards(this._cards));
     this.props.resetCasds();
   }
   stepGame() {
@@ -185,7 +200,7 @@ class Level1 extends React.Component {
   }
 
   winGame() {
-    if (!this.props.level1.gameWin) {
+    if (!this.props.level2.gameWin) {
       if (this.props.cards.length > 0) {
         let sumCasds = this.props.cards.length;
         let sumLockedCards = 0;
@@ -217,6 +232,7 @@ class Level1 extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="board">
         <div style={{ width: "100%" }}>
@@ -233,4 +249,4 @@ class Level1 extends React.Component {
   }
 }
 
-export default Level1;
+export default Level2;
