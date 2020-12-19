@@ -48,6 +48,10 @@ const level1_reducer = (state = initialState, action) => {
       return {
         ...state,
         cards: [...action.cards],
+        flippedCards: 0,
+        entryCardId: [],
+        gameWin: false,
+        stepCount: 0
       }
     case LOCKED_CARDS:
       return {
